@@ -1,30 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Page</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currency Exchange</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
   </head>
+
   <body>
+    <!-- <nav id="navbar">
+      <a href="" class="nav-brand">App</a>
+      <ul>
+        <li class="nav-item"><a href="about.html">About us</a></li>
+        <li><a href="" class="nav-item btn btn-default">Register</a></li>
+      </ul>
+    </nav> -->
+
     <div class="container">
-      <h1>Currency Exchange</h1>
-      <div>
-        <select id="baseCurrency">
-          <option value="">Select Base Currency</option>
-          <option value="USD">USD - US Dollar</option>
-          <option value="EUR">EUR - Euro</option>
-          <option value="GBP">GBP - British Pound</option>
-        </select>
-        <select id="targetCurrency">
-          <option value="">Select Target Currency</option>
-          <option value="USD">USD - US Dollar</option>
-          <option value="EUR">EUR - Euro</option>
-          <option value="GBP">GBP - British Pound</option>
-        </select>
-      </div>
-      <button id="trackExchangeRate" disabled>Track Exchange Rate</button>
+      <h2>Select base currency</h2>
+      <!-- <section class="cards-base">
+        <button class="card active">EUR</button>
+        <button class="card">USD</button>
+        <button class="card">GBP</button>
+        <button class="card">MXN</button>
+        <button class="card">INR</button>
+        <button class="card">SGD</button>
+      </section>
+      <h2>Select target currency</h2>
+      <section class="cards-target">
+        <button class="card active">EUR</button>
+        <button class="card">USD</button>
+        <button class="card">GBP</button>
+        <button class="card">MXN</button>
+        <button class="card">INR</button>
+        <button class="card">SGD</button>
+      </section> -->
+      <section class="cards-base">
+        <div class="card active">EUR</div>
+        <div class="card">USD</div>
+        <div class="card">GBP</div>
+        <div class="card">MXN</div>
+        <div class="card">INR</div>
+        <div class="card">SGD</div>
+      </section>
+      <h2>Select target currency</h2>
+      <section class="cards-target">
+        <div class="card active">EUR</div>
+        <div class="card">USD</div>
+        <div class="card">GBP</div>
+        <div class="card">MXN</div>
+        <div class="card">INR</div>
+        <div class="card">SGD</div>
+      </section>
     </div>
+    <button type="button" id="convert">Convert</button>
+  </div>
+    </div>
+
+    <!-- <footer id="footer-wrapper">
+      <a href="about.html" target="_blank">About us</a>
+      <a href="contact.html" target="_blank">Contact us</a>
+    </footer> -->
   </body>
 </html>
