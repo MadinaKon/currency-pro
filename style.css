@@ -573,7 +573,8 @@ input:not(.btn):focus {
   display: none;
 }
 
-.cards {
+.cards-base,
+.cards-target {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -585,7 +586,8 @@ input:not(.btn):focus {
   font-size: 20px;
   display: grid;
   place-items: center;
-  padding: 30px;
+  padding: 20px;
+  margin: 20px;
   cursor: pointer;
   opacity: 0.8;
   transition: opacity 200ms;
@@ -598,4 +600,21 @@ input:not(.btn):focus {
   background-color: var(--accent-1);
   color: white;
   font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+button:hover {
+  background-color: #0056b3;
 }
