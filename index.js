@@ -2,9 +2,9 @@ import { getSelectedCurrency } from "./helpers.js";
 
 const cardsBase = document.querySelectorAll(".cards-base .card");
 const cardsTarget = document.querySelectorAll(".cards-target .card");
-const trackExchangeRateAnchor = document.getElementById("convert");
+const trackExchangeRate = document.getElementById("convert");
 
-// trackExchangeRateAnchor.disabled = true;
+trackExchangeRate.disabled = true;
 
 cardsBase.forEach((card) => {
   card.addEventListener("click", (event) => {
@@ -31,20 +31,28 @@ cardsTarget.forEach((card) => {
 });
 
 cardsBase.forEach((card) => {
-  card.addEventListener("change", toggleTrackAnchor);
+  card.addEventListener("change", toggleTrackButton);
 });
 
 cardsTarget.forEach((card) => {
-  card.addEventListener("change", toggleTrackAnchor);
+  card.addEventListener("change", toggleTrackButton);
 });
 
-function toggleTrackAnchor() {
-  const cardsBaseValue = cardsBase.value;
-  const cardsTargetValue = cardsTarget.value;
+function toggleTrackButton() {
+  const baseActive = document.querySelector(".cards-base .card.active");
+  const targetActive = document.querySelector(".cards-target .card.active");
 
-  if (cardsBaseValue && cardsTargetValue) {
-    trackExchangeRateAnchor.disabled = false;
+  // results.html?base=EUR&target=USD
+  if (baseActive && targetActive) {
+    trackExchangeRate.disabled = false;
+
+    // trackExchangeRate.setAttribute(
+    //   "href",
+    //   `results.html?base=${baseValue}&target=${targetValue}`
+    // );
+
+    trackExchangeRate.setAttribute("href", `results.html?base=EUR&target=USD`);
   } else {
-    trackExchangeRateAnchor.disabled = true;
+    trackExchangeRate.disabled = true;
   }
 }
